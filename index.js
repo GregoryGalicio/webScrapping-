@@ -15,8 +15,16 @@ async function iniciar(){
    console.log(websiteTitle.html());
 
    const websiteHeading = $('h1');
-   console.log(websiteHeading.html());
-}
+   console.log(websiteHeading.text().trim());
+   const quote = $('.quote').find('a');
+   console.log(quote.html());
 
+
+   const  thrid_quote = $(".quote").next().next();
+   //console.log(thrid_quote.html());
+
+   const containerClass = $(".row .col-md-8").parent().next();
+   console.log(containerClass.html());
+}
 
 iniciar();
