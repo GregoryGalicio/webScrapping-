@@ -24,7 +24,18 @@ async function iniciar(){
    //console.log(thrid_quote.html());
 
    const containerClass = $(".row .col-md-8").parent().next();
-   console.log(containerClass.html());
+   //console.log(containerClass.html());
+
+   const quotes = $('.quote span.text').each((i,el ) =>{
+    //console.log(i+1, $(el).text());
+    const quote_text = $(el).text()
+    const quote = quote_text.replace(/(^\“|\”$)/g,"")
+
+    console.log(i+1, quote)
+   })
+   
+
+
 }
 
 iniciar();
